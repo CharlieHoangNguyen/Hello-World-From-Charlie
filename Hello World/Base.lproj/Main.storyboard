@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,114 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hello_World" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptt-pX-sKU" userLabel="Background Button">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ResetDefaults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="06g-nv-Lb6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello From Charlie!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-Cj-rzv">
+                                <rect key="frame" x="25.5" y="43" width="324.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyk-tx-qDc">
+                                <rect key="frame" x="99.5" y="310" width="176" height="39"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Change Text Color">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChangeTextColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K9S-Ch-nSf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Z0-mu-6ei">
+                                <rect key="frame" x="62" y="369" width="251" height="39"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Change Background Color">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChangeBackgroundColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Uz-I2-8Yu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpd-JX-waB">
+                                <rect key="frame" x="98" y="427" width="179" height="39"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Goodbye Message">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="GoodbyeMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="720-Rg-EeM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eH4-Rf-CHs">
+                                <rect key="frame" x="62.5" y="129" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="d6K-cR-dnX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-uW-ck1">
+                                <rect key="frame" x="97" y="171" width="181" height="39"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Change Text String">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChangeTextString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKg-kw-0fR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Background Color"/>
+                        <constraints>
+                            <constraint firstItem="1bp-uW-ck1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8g1-ZR-h2B"/>
+                            <constraint firstItem="M4p-Cj-rzv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="BVA-rd-T88"/>
+                            <constraint firstItem="Vyk-tx-qDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fyy-qb-T2F"/>
+                            <constraint firstItem="eH4-Rf-CHs" firstAttribute="top" secondItem="M4p-Cj-rzv" secondAttribute="bottom" constant="38" id="LvN-Jt-eht"/>
+                            <constraint firstItem="9Z0-mu-6ei" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SEG-OA-Oxl"/>
+                            <constraint firstItem="rpd-JX-waB" firstAttribute="top" secondItem="9Z0-mu-6ei" secondAttribute="bottom" constant="19" id="Yjc-Qz-RHZ"/>
+                            <constraint firstItem="1bp-uW-ck1" firstAttribute="top" secondItem="eH4-Rf-CHs" secondAttribute="bottom" constant="8" id="bBV-gl-Ywr"/>
+                            <constraint firstItem="eH4-Rf-CHs" firstAttribute="top" secondItem="M4p-Cj-rzv" secondAttribute="bottom" constant="38" id="dNt-f2-12D"/>
+                            <constraint firstItem="rpd-JX-waB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dqJ-qg-F3i"/>
+                            <constraint firstItem="9Z0-mu-6ei" firstAttribute="top" secondItem="Vyk-tx-qDc" secondAttribute="bottom" constant="20" id="eBh-f3-MvE"/>
+                            <constraint firstItem="Vyk-tx-qDc" firstAttribute="top" secondItem="1bp-uW-ck1" secondAttribute="bottom" constant="100" id="g56-9c-hd6"/>
+                            <constraint firstItem="eH4-Rf-CHs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="izo-Ih-kqE"/>
+                            <constraint firstItem="M4p-Cj-rzv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sir-3h-QLf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="BackgroundView" destination="8bC-Xf-vdC" id="qPq-qo-Ff2"/>
+                        <outlet property="ChangeBackgroundColorButton" destination="9Z0-mu-6ei" id="E9F-12-IIY"/>
+                        <outlet property="ChangeTextColorButton" destination="Vyk-tx-qDc" id="FrG-Oc-X8V"/>
+                        <outlet property="ChangeTextStringButton" destination="1bp-uW-ck1" id="Bge-E3-TEe"/>
+                        <outlet property="GoodbyeMessageButton" destination="rpd-JX-waB" id="PC6-s1-lGs"/>
+                        <outlet property="HelloText" destination="M4p-Cj-rzv" id="wPN-Ci-1nQ"/>
+                        <outlet property="TextField" destination="eH4-Rf-CHs" id="0Ei-CU-RXc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Background Color">
+            <color red="0.0" green="0.95022271682541426" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
